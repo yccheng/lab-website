@@ -676,6 +676,7 @@ ul.news_lst li {
     }
     .logo_frm img {
         width: 90%;
+        height: auto;
     }
     .logo_frm {
         width: 30%
