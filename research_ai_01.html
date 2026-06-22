@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>研究方向│國立交通大學醫學工程實驗室</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
+   
+  </head>
+<style type="text/css">
+  
+
+</style>
+  <body>
+    <div id="wrapper">
+      <!--↓↓↓ LOGO及選單位置 ↓↓↓-->
+      <header>        
+        <div class="logo_frm"><a title="回首頁" href="index.html" ><img src="images/logo.jpg" width="80" height="80"></a></div>
+        <div class="nav_block">
+          <div class="nav_icon_block">
+            <div id="nav_icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          
+          <ul class="navigation">
+            <li><a title="實驗室成員" href="members.html">實驗室成員</a><h5>members</h5></li>
+            <li><a class="active" title="研究方向" href="research.html">研究方向</a><h5>research</h5></li>
+            <li><a title="論文發表" href="publication.html">論文發表</a><h5>publication</h5></li>
+            <li><a title="研究計畫" href="project.html">研究計畫</a><h5>project</h5></li>
+            <li><a title="實驗室照片" href="galary.html">實驗室照片</a><h5>galary</h5></li>
+            <li><a title="注意事項" href="attention.html">注意事項</a><h5>attention</h5></li>
+            <li><a title="聯絡我們" href="contact.html">聯絡我們</a><h5>contact</h5></li>
+
+          </ul>
+        </div>        
+      </header>
+      <!--↑↑↑ LOGO及選單位置 ↑↑↑-->
+
+
+
+      <section>
+        <article class="cnt_frm">
+          <div class="idx_frm mgn">
+            <div class="content_frm">
+              
+              <div class="goback">
+                <h5><a title="回研究方向" href="javascript:history.back()">回研究方向</a></h5>
+              </div>              
+
+              <div class="clearfix mgn eight_prnt">
+                <div class="research_dl_block">
+                  <h3>支氣管內視鏡超音波影像病灶區分</h3>
+                  <h3><span>The interpretation of endobronchial ultrasound image</span></h3>
+                  
+                  
+
+                  <h4>摘要</h4>
+                  <p> 本研究旨在利用三維卷積神經網路透過支氣管內視鏡超音波 (EBUS)之超音波影像區分惡性及良性縱隔腔病灶。Endobronchial ultrasound-guided transbronchial needle aspiration (EBUS-TBNA)為胸腔內淋巴結的超聲波診斷工具，可利用灰階模式、都卜勒模式、彈性成像模式分析病灶特徵，並針對惡性病灶進行切片採樣。然而因術中需結合多種成像特徵來判斷病灶良惡性，因此在病灶判讀上需要許多時間。另外以EBUS影像判讀良惡性需要高度專業知識且準確率低，導致過多陰性病灶的切片次數，延長手術時間。</p>
+                  <p>近年來深度學習(DL)逐漸盛行，卷積神經網路(CNN)在影像處理的領域有十分可觀的進展。若能將深度學習模型結合EBUS-TBNA手術，能夠減少術中病灶判讀時間，並減少過多陰性病灶的切片次數。</p>
+                  <p>在EBUS影像良惡性判讀上，過去有研究利用人工神經網路(ANN)或二維卷機神經網路(2D CNN)架構進行訓練，取得了不錯的準確率。但過去所提出的模型仍需要手動進行挑選資料與前處理動作，臨床使用上，將會造成額外人力負擔，另外以二維架構並未考慮時間序列特徵，將喪失影片中上下文的關聯。</p><img src="images/EBUS_2.png" class="rch_rwd">
+                  <p>與先前的研究相比，我們以自動化的方式進行前處理與資料篩選。並且為了融合各種成像模式與時間序列特徵，我們以時間序列的三維卷積神經網路(3D CNN)作為模型骨幹設計多種架構，其中Res3D_U以灰階模式作為輸入，測試模型對於灰階模式的特徵提取能力，接下來加入都卜勒模式的Res3D_UD測試模型結合灰階與都卜勒模式的能力，最後是再加入彈性成像的Res3D_UDE。</p><img src="images/EBUS_3.png" class="rch_rwd">
+                  <p>目前以灰階、都卜勒、彈性成像三種成像模式作為訓練資料的模型(Res3D_UDE)在驗證集中準確率達到82.00 %，曲線下面積(AUC)達到0.83。</p>
+                  <p>本研究直接使用手術時錄製的影片進行訓練與評估，而不會進行太多手動篩選，更適合臨床應用，另外使用3D CNN作為模型骨幹也能有效學習時空特徵進而提升準確率。若應用於臨床，期望未來可輔助導引醫師在檢查過程中快速正確找到目標病灶並進行切片取樣，減少過多陰性病灶的切片次數，進而縮短檢查時間。</p>
+                  
+                  <p>關鍵詞：深度學習、肺癌、三維卷積神經網路、支氣管內視鏡超音波檢查、縱膈腔病灶、ROC曲線下面積</p>
+
+                  
+  				 
+
+                </div><!--//research_dl_block-->
+
+
+              </div><!--//clearfix mgn eight_prnt-->
+            </div><!--//content_frm-->
+          </div><!--//idx_frm mgn-->
+        </article>
+      </section>
+
+
+
+
+      <!--↓↓↓ 底下資訊 ↓↓↓-->
+      <footer class="clearfix footer_block">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <ul>
+            <li>Department of Mechanical Engineering</li>
+            <li>National Chiao Tung University</li>
+            <li>ADDRESS : EE241, 1001 TA HSUEH ROAD, HSINCHU, TAIWAN 30010,ROC</li>
+            <li>PHONE : 886-3-5712121 Ext.55171</li>
+
+          </ul>
+
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <ul>
+            <li>國立交通大學 機械工程學系</li>
+            <li>醫學工程實驗室</li>
+            <li>地址 : 30010 新竹市大學路1001號工程五館241室</li>
+            <li>電話 : 886-3-5712121 Ext.55171</li>
+         
+          </ul>
+
+        </div>
+        
+      </footer>
+      <!--↑↑↑ 底下資訊 ↑↑↑-->
+
+    </div><!--←←← id="wrapper"-->
+
+
+    
+
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+      
+      $('#nav_icon').click(function(){
+        $('ul.navigation').toggleClass('show');
+          
+      });//
+
+
+    });
+    </script>
+  </body>
+</html>

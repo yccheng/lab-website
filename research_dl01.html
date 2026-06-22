@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>研究方向│國立交通大學醫學工程實驗室</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<div id="wrapper"><!--↓↓↓ LOGO及選單位置 ↓↓↓-->
+<header>
+<div class="logo_frm"><a href="index.html" title="回首頁"><img src="images/logo.jpg" /></a></div>
+
+<div class="nav_block">
+<div class="nav_icon_block">
+<div id="nav_icon"></div>
+</div>
+
+<ul class="navigation">
+	<li><a href="members.html" title="實驗室成員">實驗室成員</a>
+
+	<h5>members</h5>
+	</li>
+	<li><a class="active" href="research.html" title="研究方向">研究方向</a>
+	<h5>research</h5>
+	</li>
+	<li><a href="publication.html" title="論文發表">論文發表</a>
+	<h5>publication</h5>
+	</li>
+	<li><a href="project.html" title="研究計畫">研究計畫</a>
+	<h5>project</h5>
+	</li>
+	<li><a href="galary.html" title="實驗室照片">實驗室照片</a>
+	<h5>galary</h5>
+	</li>
+	<li><a href="attention.html" title="注意事項">注意事項</a>
+	<h5>attention</h5>
+	</li>
+	<li><a href="contact.html" title="聯絡我們">聯絡我們</a>
+	<h5>contact</h5>
+	</li>
+</ul>
+</div>
+</header>
+<!--↑↑↑ LOGO及選單位置 ↑↑↑-->
+
+<section>
+<article class="cnt_frm">
+<div class="idx_frm mgn">
+<div class="content_frm">
+<div class="goback">
+<h5><a href="javascript:history.back()" title="回實驗室成員">回研究方向</a></h5>
+</div>
+
+<div class="clearfix mgn eight_prnt">
+<div class="research_dl_block">
+<h3><b>高壓固態半導體脈衝電路設計用於電漿生成</b></h3>
+
+<h3>All-Solid-State Electronic Based Repetitive High Voltage Pulse MARX Generator circuit Design for Plasma Generation<span> </span></h3>
+
+<h4>背景</h4>
+
+<p>目前多項研究證實，使用脈衝波型輸出產生的電漿在放電效率與功率轉換效能皆高於以往使用弦波電壓源波型。更重要的一點，利用脈衝波型的低佔空比特性，使電漿源具有較多的冷卻時間，整體溫度比起持續輸出的弦波波型更接近室溫，此現象將使脈衝電漿更有利於生物醫學相關的研究。故具有輸出穩定高頻高壓能力的脈衝產生電路備受重視。</p>
+
+<p>馬克思脈衝產生器(MARX generator)為一典型高壓脈衝產生電路，主要的核心觀念為應用電容充放電進行倍壓以獲得高壓脈衝波型。早期因為使用的傳統開關火花間隙開關(spark gap)具有開關速度慢、壽命較短、能量損耗大的缺陷，所以電路使用上受到侷限。</p>
+
+<p>近年來，隨著半導體科技快速發展，具有較快開關速度的開關元件(金屬氧化物半導體場效電晶體Metal-Oxide-Semiconductor Field-Effect Transistor, MOSFET及絕緣柵雙極電晶體Insulated Gate Bipolar Transistor, IGBT)逐漸走向功率化，其耐高壓與高電流的能力逐漸提升，其開關轉換的能量損失亦遠小於傳統開關，將這些半導體元件應用在此高壓脈衝產生電路上，逐漸改善低工作頻率與低能量轉化效率的缺陷，另外電路具有極高的脈衝參數(電壓、佔空比、頻率)操作彈性，所以在產生電漿方面得應用逐漸受到倚重。</p>
+
+<p>馬克思脈衝產生器(MARX generator)具有極高的脈衝操作彈性，所以對於輸出的脈衝參數所能產生的電漿強度與效能亦為重要的研究主題。</p>
+
+<p>目的:</p>
+
+<p>本研究目的為以全固態半導體元件為基礎，建立一套能穩定輸出高頻高壓的脈衝電路，用以產生電漿，並且透過量化所產生的電漿能量，進一步探討不同輸出脈衝參數(電壓、佔空比、頻率等&hellip;)所產生的電漿強度與輸出效能得變化，從而得到較低的電漿溫度與較少省電的脈衝參數。</p>
+
+<h4>方法</h4>
+
+<p>固態半導體為基礎的馬克思脈衝產生器，其主要的核心運作原理為，以較低壓的直流電源並聯同步對多個電容充電，再透過開關控制將電容瞬間串聯放電至負載，以達到電容倍壓的結果。</p>
+
+<p>圖一為全固態半導體為基礎的馬克思脈衝產生器電路圖:</p>
+
+<p><img alt="" src="images/ALL_solid_1.jpg" /></p>
+
+<p>V<sub>dc</sub>為直流電源、D<sub>n</sub>為整流二極體、C<sub>n</sub>為儲能電容、S<sub>dn</sub>與S<sub>cn</sub>分別為放電開關與充電開關。</p>
+
+<p>圖二為並聯充電模式圖:</p>
+
+<p><img alt="" src="images/ALL_solid_2.jpg" /></p>
+
+<p>圖三為串聯放電模式圖:</p>
+
+<p><img alt="" src="images/ALL_solid_3.jpg" /></p>
+
+<p>透過適當的開關控制，即可輸出瞬間高壓的脈衝訊號。</p>
+
+<p>結果:</p>
+
+<p style="margin-left:12.0pt;">電阻負載測試:</p>
+
+<p><img alt="" src="images/ALL_solid_4.jpg" /></p>
+
+<p style="margin-left:12.0pt;">最大輸出電壓為4.8 kV、脈波寬度固定為1 &micro;s、上升時間與下降時間方別為62.5 ns與75.5 ns最大。</p>
+
+<p style="margin-left:12.0pt;"></p>
+
+<p style="margin-left:12.0pt;">平板電漿負載測試:</p>
+
+<p><img alt="" src="images/ALL_solid_5.jpg" /></p>
+
+<p><img alt="" src="images/ALL_solid_6.jpg" /></p>
+
+<p style="margin-left:12.0pt;">工作氣體為氦氣，輸入電壓為1.2 kV，上升沿與下降沿產生的峰值電流約為&plusmn;2 A。</p>
+
+<p style="margin-left:12.0pt;"></p>
+
+<h4></h4>
+</div>
+<!--//research_dl_block--></div>
+<!--//clearfix mgn eight_prnt--></div>
+<!--//content_frm--></div>
+<!--//idx_frm mgn--></article>
+</section>
+<!--↓↓↓ 底下資訊 ↓↓↓-->
+
+<footer class="clearfix footer_block">
+<div class="col-sm-6 col-md-6 col-lg-6">
+<ul>
+	<li>Department of Mechanical Engineering</li>
+	<li>National Chiao Tung University</li>
+	<li>ADDRESS : EE241, 1001 TA HSUEH ROAD, HSINCHU, TAIWAN 30010,ROC</li>
+	<li>PHONE : 886-3-5712121 Ext.55171</li>
+</ul>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-6">
+<ul>
+	<li>國立交通大學 機械工程學系</li>
+	<li>醫學工程實驗室</li>
+	<li>地址 : 30010 新竹市大學路1001號工程五館241室</li>
+	<li>電話 : 886-3-5712121 Ext.55171</li>
+</ul>
+</div>
+</footer>
+<!--↑↑↑ 底下資訊 ↑↑↑--></div>
+<!--←←← id="wrapper"--><!-- jQuery (Bootstrap 所有外掛均需要使用) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 --><script src="js/bootstrap.min.js"></script><script type="text/javascript">
+      $( document ).ready(function() {
+      
+      $('#nav_icon').click(function(){
+        $('ul.navigation').toggleClass('show');
+          
+      });//
+
+
+    });
+    </script></body>
+</html>

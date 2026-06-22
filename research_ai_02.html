@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>研究方向│國立交通大學醫學工程實驗室</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
+   
+  </head>
+<style type="text/css">
+  
+
+</style>
+  <body>
+    <div id="wrapper">
+      <!--↓↓↓ LOGO及選單位置 ↓↓↓-->
+      <header>        
+        <div class="logo_frm"><a title="回首頁" href="index.html" ><img src="images/logo.jpg" width="80" height="80"></a></div>
+        <div class="nav_block">
+          <div class="nav_icon_block">
+            <div id="nav_icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          
+          <ul class="navigation">
+            <li><a title="實驗室成員" href="members.html">實驗室成員</a><h5>members</h5></li>
+            <li><a class="active" title="研究方向" href="research.html">研究方向</a><h5>research</h5></li>
+            <li><a title="論文發表" href="publication.html">論文發表</a><h5>publication</h5></li>
+            <li><a title="研究計畫" href="project.html">研究計畫</a><h5>project</h5></li>
+            <li><a title="實驗室照片" href="galary.html">實驗室照片</a><h5>galary</h5></li>
+            <li><a title="注意事項" href="attention.html">注意事項</a><h5>attention</h5></li>
+            <li><a title="聯絡我們" href="contact.html">聯絡我們</a><h5>contact</h5></li>
+
+          </ul>
+        </div>        
+      </header>
+      <!--↑↑↑ LOGO及選單位置 ↑↑↑-->
+
+
+
+      <section>
+        <article class="cnt_frm">
+          <div class="idx_frm mgn">
+            <div class="content_frm">
+              
+              <div class="goback">
+                <h5><a title="回研究方向" href="javascript:history.back()">回研究方向</a></h5>
+              </div>              
+
+              <div class="clearfix mgn eight_prnt">
+                <div class="research_dl_block">
+                  <h3>肺栓塞預警系統</h3>
+                  <h3><span>Early Detection of Pulmonary Embolism from CT Image</span></h3>
+                  
+                  
+
+                  <h4>摘要</h4>
+                  <p>本研究目的為利用深度學習透過一般的電腦斷層攝影(CT)影像建立一套適合臨床使用的肺栓塞預警系統。在現今對於肺栓塞(PE)病人的電腦檢測方法中，均需使用到電腦斷層肺血管攝影(CTPA)影像作為判斷及辨識病徵的資料，再利用深度學習的方法對於CTPA影像中的病灶區域做語意分割。因此本系統希望能透過CT影像提前發現並預警可能的PE病患。</p>
+                  <img src="images/CT_1.png" class="rch_rwd">
+                  <p>本系統將分為兩個階段，第一個階段(藍框處)為CT影像的分類，本階段將利用卷積神經網路對於胸腔的電腦斷層攝影影像進行分類，挑選出含有疾病的截面並再從中挑選出可能為PE的影像，希望透過我們設計的網路大幅的提升隱藏之PE病患的被發現機率，並減少PE病患等待檢查的時間，增加醫院影像科影像處理效率。透過這個分類模型，我們希望可以在醫院大量的檢查影像中，優先警示可能含有疾病的病患資料，使得這些影像被優先判讀及處理。第二階段(橘框處)為透過深度學習模型模擬CTPA影像，用於PE病人病徵的識別，提供醫生除了第一階段之分類網路的結果外另一個判斷PE病患的參考依據。</p>
+                  <p>在CT影像分類上，首先我們提出了肺部空間動態擷取的方法，快速的針對不同病患的肺部空間進行精準的擷取。</p>
+                  <img src="images/CT_2.png" class="rch_rwd">
+                  <p>其次在模型設計上，由於在臨床應用的場景中，我們希望能精準地剔除WNL截面以達到減少影像學檢查的負擔及提升醫院診療的效率。我們採用兩階段的分類模型以提升不同階段的精準度。</p>
+                  <img src="images/CT_3.png" class="rch_rwd">
+                  <p>我們使用空洞卷積及注意力機制，搭配多重醫療數位影像傳輸協定(DICOM)格式影像窗值輸入，加強深度學習網路對於肺栓塞的辨識能力，使得臨床上不須再進行CTPA攝影即可進行PE的辨識。</p>
+                  <img src="images/CT_4.png" class="rch_rwd">
+                  <p>我們最終在分類任務上達到99.4%的分類精準度，並於PE及非PE的疾病中，分別達到了100%及99.2%的分類靈敏度，甚至在測試集中僅有一張CT截面的分類錯誤。</p>
+                  <p>段之模擬CTPA影像生成系統則使用生成對抗網路，在CT影像中強化肺部血管之特徵，加強影像的參考價值，提供醫院判斷PE病患的依據。於實驗中我們選用了不需要配對影像的CycleGAN作為我們網路的骨幹架構，發現生成影像的結果已經有一定程度的相近於目標的CTPA影像，但是在肺栓塞的特徵上，並未產生的足夠明顯，因此我們在原始的CycleGAN中加入了一個監督式的神經網路，針對重建之CT影像進行判讀，查看其是否為肺栓塞之影像，並將此網路對於這張影像判讀為肺栓塞的信心指數作為一個新的損失函數回傳予生成器。透過這個方法，我們的生成對抗式網路能生成更接近有肺栓塞特徵的模擬CTPA影像。</p>
+                  <img src="images/CT_5.png" class="rch_rwd">
+                  <p>由於本實驗目的為生成轉換不同類型之醫學影像，並未有相關之研究，因此本實驗將設計一套方法來評估我們的模型生成的結果。我們的希望模型輸出的影像與原始的CTPA影像越接近越好，因此我們要觀察的目標有以下幾點: 影像生成品質、結構相似度、影像相似度。以下為生成之結果及評估參數之結果。</p>
+                  <img src="images/CT_6.png" class="rch_rwd">
+                  <img src="images/CT_7.png" class="rch_rwd">
+                  <p>本研究期望能對於肺栓塞臨床診斷方式提出一個新的方案，在繁複的篩檢流程中，透過深度學習網路的輔助，並檢視生成的模擬CTPA影像，使得醫生能評估病患是否需要進行CTPA的詳細檢測，提升檢測肺栓塞的速度及大幅減少未檢出的病患。</p>
+  				  <p>關鍵詞：深度學習、肺栓塞、捲積神經網路、語義分割 </p>
+
+                </div><!--//research_dl_block-->
+
+
+              </div><!--//clearfix mgn eight_prnt-->
+            </div><!--//content_frm-->
+          </div><!--//idx_frm mgn-->
+        </article>
+      </section>
+
+
+
+
+      <!--↓↓↓ 底下資訊 ↓↓↓-->
+      <footer class="clearfix footer_block">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <ul>
+            <li>Department of Mechanical Engineering</li>
+            <li>National Chiao Tung University</li>
+            <li>ADDRESS : EE241, 1001 TA HSUEH ROAD, HSINCHU, TAIWAN 30010,ROC</li>
+            <li>PHONE : 886-3-5712121 Ext.55171</li>
+
+          </ul>
+
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <ul>
+            <li>國立交通大學 機械工程學系</li>
+            <li>醫學工程實驗室</li>
+            <li>地址 : 30010 新竹市大學路1001號工程五館241室</li>
+            <li>電話 : 886-3-5712121 Ext.55171</li>
+         
+          </ul>
+
+        </div>
+        
+      </footer>
+      <!--↑↑↑ 底下資訊 ↑↑↑-->
+
+    </div><!--←←← id="wrapper"-->
+
+
+    
+
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+      
+      $('#nav_icon').click(function(){
+        $('ul.navigation').toggleClass('show');
+          
+      });//
+
+
+    });
+    </script>
+  </body>
+</html>
